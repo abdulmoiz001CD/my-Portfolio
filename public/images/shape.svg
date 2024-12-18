@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <!-- Upper Square Shape -->
+  <rect x="0" y="0" width="300" height="120" fill="orange"/>
+  
+  <!-- Lower Wavy Shape -->
+  <path d="M0 20 C50 100, 100 140, 1 120 C200 100, 250 40, 300 120 L300 200 L0 200 Z" fill="orange"/>
+  
+  <!-- Text "Your Name" in the center -->
+  <text x="150" y="80" fill="white" font-size="30" font-family="'Arial Black', sans-serif" text-anchor="middle" dominant-baseline="middle">
+    Your Name
+  </text>
+</svg>
