@@ -63,7 +63,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ThemeToggler from '../components/Theme/ThemeUses'; 
+import ThemeToggler from '../Theme/ThemeUses'; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

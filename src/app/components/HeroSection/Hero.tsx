@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaLocationArrow } from "react-icons/fa6";
 import { FiDownload } from "react-icons/fi";
-import Social from '../components/Social';
+import Social from '../Social';
 
 
 const HeroSection = () => {
@@ -52,7 +52,7 @@ const HeroSection = () => {
 
 
       {/* Image Div */}
-      <div className="flex-1 flex justify-center items-center">
+      <div className="flex-1 hidden lg:flex justify-center  items-center">
   <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-lg">
     <Image
       src="/images/img.jpeg"
