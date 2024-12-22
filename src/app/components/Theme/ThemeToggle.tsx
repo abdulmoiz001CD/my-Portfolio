@@ -1,28 +1,33 @@
- 'use client'
-import React from 'react'
-import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
-import { Button } from "@/components/ui/button"
+'use client';
 
+import { useEffect, useState } from 'react';
 
+  const ThemeToggle = () => {
+  const [theme, setTheme] = useState('light');
 
-export const ThemeToggle = () => {
-    const {theme, setTheme} = useTheme();
+  useEffect(() => {
+    // Load theme from localStorage or set default
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    setTheme(savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
+  };
 
   return (
-   <Button onClick= {() => setTheme(theme === 'dark'?'light' :'dark')}
-   className="p-2 rounded-md border border-gray-300 dark:border-gray-700">
-
-{theme === 'dark' ? (
-  <Sun className="w-5 h-5 text-blue-500" />
-):(<Moon className="w-5 h-5 text-blue-500" />)
-
-
-}
-
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded bg-gray-300 dark:bg-gray-700"
+    >
+      {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+    </button>
+  );
+};
 
 
-
-   </Button>
-  )
-}
+export default ThemeToggle

@@ -40,9 +40,9 @@ const Social: React.FC<SocialProps> = ({ contClass, stylClass }) => {
         <div className={`${contClass}`}>
             {icon.map((value, index) => (
                 <Link key={index}
-                    href={value.path} // Set the link path
-                    target="_blank" // Open in a new tab (optional for external links)
-                    rel="noopener noreferrer" // Security for external links
+                    href={value.path} 
+                    target="_blank"
+                    rel="noopener noreferrer" 
                     className={stylClass}>
                     {value.name}
                 </Link>

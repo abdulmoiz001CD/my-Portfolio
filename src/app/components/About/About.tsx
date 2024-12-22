@@ -1,8 +1,7 @@
 import React from 'react'
-// components/AboutSection.jsx
 import Image from 'next/image';
 
-const page = () => {
+const About = () => {
   return (
     <section className="py-16 px-6 max-w-7xl mx-auto">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -27,8 +26,9 @@ const page = () => {
           <div className="text-center lg:text-left">
 
             <div className='flex items-center gap-3'>
-            <Image src='/images/circle.svg' alt='circle' width={20} height={10} 
-            />
+            <Image src='/images/circle.svg' alt='circle' width={20} height={20}/>
+
+
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
               About Me
               <div className="w-20 h-1 bg-orange-600 mx-auto lg:mx-0 mt-2"></div>
@@ -110,4 +110,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;
