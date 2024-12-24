@@ -27,13 +27,13 @@ const serviceTile = [
 
 const Service = () => {
     return (
-        <div className="Card min-h-screen  py-10">
+        <div className="Card min-h-screen  py-10 pt-[12rem]">
             <h1 className="text-4xl font-bold text-center mb-8">Our Services</h1>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                 {serviceTile.map((value, index) => (
                     <Card
                         key={index}
-                        className="h-[259px] rounded-lg border border-graynpm run dev-100 bg-white dark:bg-[#000000] hover:shadow-xl dark:shadow-white-100 transition-all duration-300 mt-12" // Added mt-12 for icon space
+                        className="max-w-[300px] lg:max-w-[354px] h-[270px] lg:h-[259px] mx-auto rounded-lg border border-graynpm run  bg-white dark:bg-[#000000] hover:shadow-xl dark:shadow-white-100 transition-all duration-300 mt-12" // Added mt-12 for icon space
                     >
                         <CardHeader className="flex flex-col items-center text-center py-6 relative">
                             <div className="text-pink-600 dark:text-[#e14040] absolute -top-10 left-1/2 transform -translate-x-1/2  px-4">

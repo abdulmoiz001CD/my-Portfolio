@@ -51,7 +51,7 @@ const Navbar = () => {
           <li><Link href="/contact" className="text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors">Contact</Link></li>
           <li><Link href="/blog" className="text-gray-700 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-400 transition-colors">Blog</Link></li>
           <li>
-          <ThemeToggle />
+          <ThemeToggle/>
           </li>
         </ul>
       </div>

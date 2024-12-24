@@ -1,9 +1,10 @@
 'use client';
+import { Sun, Moon } from 'lucide-react';
 
 import { useEffect, useState } from 'react';
 
   const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState<string|null>(null);
 
   useEffect(() => {
     // Load theme from localStorage or set default
@@ -19,15 +20,25 @@ import { useEffect, useState } from 'react';
     localStorage.setItem('theme', newTheme);
   };
 
+
+
+  if (theme === null) {
+    // Prevent rendering until the theme is loaded
+    return null;
+  }
+
+  
+
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded bg-gray-300 dark:bg-gray-700"
+      className="p-2 rounded-2xl bg-[#ffa928] dark:bg-gray-700 transition-colors"
     >
-      {theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
+      {theme === 'light' ? <Sun size={15} className="text-black" /> : <Moon size={15} className="text-white" />}
     </button>
   );
 };
 
 
 export default ThemeToggle
+
